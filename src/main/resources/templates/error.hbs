@@ -1,0 +1,18 @@
+{{#partial "title"}}{{error.error}}{{/partial}}
+
+{{#partial "body"}}
+    <div class="container">
+        {{#error.message}}
+            <h1>Error: {{error.message}}</h1>
+        {{/error.message}}
+        {{^error.message}}
+            <h1>Error: {{error.error}}</h1>
+        {{/error.message}}
+        {{#error.trace}}
+          <p>Details:</p>
+          <pre>{{error.trace}}</pre>
+        {{/error.trace}}
+    </div>
+{{/partial}}
+
+{{>base}}

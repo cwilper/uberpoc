@@ -1,0 +1,3 @@
+function someFunc() {
+    alert('somFunc');
+}

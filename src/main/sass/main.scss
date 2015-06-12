@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@import 'colors';
+
+/**
+ * Note: It is not required for build, but in order to support autocomplete,
+ * compass support may be turned on in IntelliJ. This requires you to install
+ * compass the usual way. But this import will work during compile regardless.
+ */
+@import "compass";
+
+/** Example of customizing bootstrap-sass defaults. */
+$jumbotron-bg: green;
+$jumbotron-color: white;
+
+/**
+ * Note: A shorted path could have been used here by using a couple techniques.
+ * But doing it this way (which depends on running 'mvn generate-resources' beforehand)
+ * allows us to use webjars while still getting the benefit of autocompletion support
+ * in the ide.
+ */
+@import "../../../target/webjars/META-INF/resources/webjars/bootstrap-sass/3.3.1/stylesheets/bootstrap";
+
+/* Example class that uses regular Compass mixins. */
+.app-rounded {
+  @include border-radius(8px);
+  @include box-shadow(grey 4px 4px 16px);
+}
+
+/** Example class that uses SASS variables we've defined previously. */
+.app-span {
+  background-color: #f0f8ff;
+  color: $app-default-text-color;
+  font-size: 1.5em;
+  padding: 10px;
+}

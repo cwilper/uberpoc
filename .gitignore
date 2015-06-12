@@ -1,0 +1,22 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+target/
+*.ser
+*.ec
+dependency-reduced-pom.xml
+
+# Generated; see pom.xml for details
+src/main/resources/static/css
+
+# IntelliJ
+*.ipr
+*.iml
+*.iws
+.idea/
+
+# Other
+.DS_Store

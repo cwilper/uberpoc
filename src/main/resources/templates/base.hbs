@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>{{#block "title"}}{{title}}{{/block}}</title>
+
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+  <link rel="stylesheet" href="/css/main.css"/>
+  {{#block "otherLinks"}}{{/block}}
+</head>
+<body>
+  {{#block "body"}}{{/block}}
+
+  {{#if useMinifiedJavascript}}
+    <script src="/js/all.js"></script>
+  {{else}}
+    <script src="/webjars/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+  {{/if}}
+
+  <!--
+    If a page has it's own javascript, adding it to the 'otherScripts' block will include it.
+  -->
+  {{#block "otherScripts"}}{{/block}}
+</body>
+</html>
